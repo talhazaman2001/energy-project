@@ -194,7 +194,7 @@ resource "aws_api_gateway_rest_api" "energy_api" {
 
 resource "aws_api_gateway_resource" "energy_resource" {
     rest_api_id = aws_api_gateway_rest_api.energy_api.id
-    parent_id = aws_api_gateway_rest_api.energy_api.root_resource_id
+    parent_id = aws_api_gateway_rest_api.energy_api.root_resource.id
     path_part = "energy"
 }
 
