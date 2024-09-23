@@ -63,7 +63,7 @@ def send_alert(device_id, energy_usage):
         energy_usage (float): The energy usage value that triggered an alert.
     """
     sns = boto3.client('sns')
-    topic_arn = 'arn:aws:sns:region:account-id:EnergyAlerts'
+    topic_arn = 'arn:aws:sns:eu-west-2:463470963000:EnergyAlerts'
     message = (f'ALERT: Device {device_id} has abnormal energy consumption.\n'
                f'Energy Usage: {energy_usage} kWh')
     
