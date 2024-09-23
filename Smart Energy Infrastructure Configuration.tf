@@ -1,3 +1,11 @@
+# Iot Thing Creation
+resource "aws_iot_thing" "iot_device" {
+    name = "energy-device"
+    attributes = {
+      device_type = "energy_monitor"
+    }
+}
+
 # Define the IoT Core Configurations
 
 resource "aws_iot_policy" "iot_policy" {
