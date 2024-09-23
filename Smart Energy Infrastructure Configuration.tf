@@ -43,7 +43,7 @@ resource "aws_lambda_function" "process_energy_data" {
     runtime = "python3.12"
     
     # ZIP file containing the function code
-    filename = "${path.module}users/documents/smart-energy-monitoring-project/function.zip"
+    filename = "${path.module}/function.zip"
 
     environment {
         variables = {
